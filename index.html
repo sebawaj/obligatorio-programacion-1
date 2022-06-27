@@ -1,0 +1,261 @@
+<!-- Sebastian Wajshan 159517 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script></script>
+    <title>Sistema de ofertas</title>
+  </head>
+  <body>
+    <h1 class="titulo-principal">Sistema de ofertas</h1>
+
+    <section class="menu">
+      <nav>
+        <a id="secciones" href="#datos">Datos</a>
+        <a id="secciones" href="#consultas">Consultas</a>
+        <a id="secciones" href="#conozca-al-equipo">Conozca al equipo</a>
+      </nav>
+    </section>
+
+    <section id="datos" class="datos">
+      <h2 class="titulo-clases">Datos</h2>
+      <div class="form-alta-empleado">
+        <h2 class="subtitulos">Alta de Empleado</h2>
+
+        <form id="empleadoForm" method="post" action="">
+          <div class="form-group">
+            <label class="celda" for="nombre">Nombre</label>
+            <input class="celda" type="nombre" class="form-control" id="nombreEmpleado" placeholder="" name="name" required maxlength="30"/><br />
+            <label class="celda" for="cedula">Cédula</label>
+            <input class="celda" type="number" class="form-control" id="cedulaEmpleado" placeholder="" name="ci" required maxlength="30"/><br />
+            <label class="celda" for="departamento">Departamento</label>
+            <select id="departamentoEmpleado" class="celda" class="departamento">
+              <option>Artigas</option>
+              <option>Canelones</option>
+              <option>Cerro Largo</option>
+              <option>Colonia</option>
+              <option>Durazno</option>
+              <option>Flores</option>
+              <option>Florida</option>
+              <option>Lavalleja</option> 
+              <option>Maldonado</option>             
+              <option>Montevideo</option>
+              <option>Paysandú</option>
+              <option>Rio Negro</option>
+              <option>Rivera</option>
+              <option>Rocha</option>
+              <option>Salto</option>
+              <option>San José</option>
+              <option>Soriano</option>
+              <option>Tacuarembó</option>
+              <option>Treinta y tres</option>
+            </select><br />
+            <label class="celda" for="nombre">Edad</label>
+            <input class="campo" type="number" class="form-control" id="edadEmpleado" placeholder="" name="edad" required maxlength="30" /><br />
+            <button id="botonEmpleado" type="submit" class="botones">Agregar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-alta-rubro">
+        <h2 class="subtitulos">Alta de Rubro</h2>
+        <form id="rubroForm" method="post" action="">
+          <div class="form-group">
+            <label class="celda" for="nombre">Nombre</label>
+            <input type="nombre" class="form-control" id="rubroNombre" placeholder="" name="name" required maxlength="30"/><br />
+            <label class="celda" for="nombre">Descripción</label>
+            <input type="text" class="form-control" id="rubroDescripcion" placeholder="" name="ci" required maxlength="30"/><br />
+          </div>
+          <button type="submit" class="botones">Agregar</button>
+        </form>
+      </div>
+
+      <div class="form-alta-oferta">
+        <h2 class="subtitulos">Alta de Oferta</h2>
+        <form class="form-group" id="altaOfertaForm" method="post" action="">
+          <label for="empleado">Empleado</label>
+          <select id="selectAltaOfertaEmpleado" class="empleado">
+            <option selected>Sin, datos</option>
+          </select>
+          <br />
+
+          <label for="rubro">Rubro</label>
+          <select id="selectAltaOfertaRubro" class="rubro">
+            <option selected>Sin datos</option>
+          </select>
+          <br/>
+          <label class="celda" for="detalle">Detalle</label>
+          <input
+            type="text"
+            class="form-control"
+            id="rubroDetalle"
+            placeholder=""
+            name="detalle"
+            required
+            maxlength="30"
+          />
+          <br />
+          <label class="celda" for="nombre">Precio</label>
+          <input
+            type="number"
+            class="form-control"
+            id="rubroPrecio"
+            placeholder=""
+            name="precio"
+            required
+          />
+          <br />
+          <button type="submit" class="botones">Agregar</button>
+        </form>
+      </div>
+
+      <div class="form-baja-oferta">
+        <h2 class="subtitulos">Baja de Oferta</h2>
+
+        <form class="form-group" id="bajaOfertaForm" method="post" action="">
+          <label for="oferta">Oferta</label>
+          <select id="selectBajaOferta" class="oferta">
+            <option selected>Sin datos</option></select
+          ><br />
+          <button type="submit" class="botones">Borrar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="consultas">
+      <h2 class="titulo-clases">Consultas</h2>
+
+      <div class="oferta-rubro">
+        <h2 class="subtitulos">Oferta de un rubro</h2>
+
+        <form id="consultasRubro" class="form-group" method="post" action="">
+          <label for="rubro">Rubro</label>
+          <select id="selectRubroConsultas" class="oferta">
+            <option selected>Sin datos</option>
+          </select>
+          <button type="submit" class="botones">Consultar</button>
+        </form>
+        <legend>Órden:</legend>
+
+        <div>
+          <input class="checkbox"
+            type="radio"
+            id="precioCreciente"
+            name="orden"
+            value="precioCreciente"
+            checked
+            required
+            maxlength="30"
+          />
+          <label for="precioCreciente">precio creciente</label>
+        </div>
+        <div>
+          <input class="checkbox"
+            type="radio"
+            id="nombreCreciente"
+            name="orden"
+            value="nombreCreciente"
+            required
+            maxlength="30"
+          />
+          <label for="nombreCreciente">nombre departamento creciente</label>
+        </div>
+        <br>
+
+
+        <div class="tabla">
+          <table class="tabla1">
+
+          <caption id="tituloPromedioRubro"class="estadisticas">
+              Rubro: Sin datos 
+              Promedio: Sin Datos
+          </caption>
+          <thead>
+              <tr>
+                <th>Nombre Empleado</th>
+                <th>Departamento</th>
+                <th>Detalle de la oferta</th>
+                <th>Precio</th>
+                <th>Tipo</th>
+              </tr>
+            </thead>
+            <tbody id="employeesTable">
+              <tr>
+                <td>nombre</td>
+                <td>departamento</td>
+                <td>detalle</td>
+                <td>precio</td>
+                <td>tipo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="maxima-cantidad-ofertas">
+          <h2 class="subtitulos">Rubros con Máxima Cantidad de Ofertas</h2>
+          <ul id="rubMax" class="sin-datos-1">
+            <li>Sin Datos</li> 
+          </ul>
+        </div>
+
+        <div class="rubros-sin-ofertas">
+          <h2 class="subtitulos">Rubros sin Ofertas</h2>
+          <ul id="rubSinOfertas" class="sin-datos-2">
+           <li>Sin Datos</li> 
+          </ul>
+        </div>
+
+        <div class="tabla-de-empleados">
+          <h2 class="subtitulos">Tabla de Empleados</h2>
+          <table class="tabla1">
+            <thead>
+              <tr>
+                <th>Nombre Empleado</th>
+                <th>Cédula</th>
+                <th>Departamento</th>
+                <th>Edad</th>
+                <th>Cantidad de ofertas</th>
+              </tr>
+            </thead>
+            <tbody id="tablaDeEmpleados">
+              <tr>
+                <td>nombre</td>
+                <td>Cédula</td>
+                <td>Departamento</td>
+                <td>Edad</td>
+                <td>Cantidad de ofertas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="conozca-al-equipo" class="conozca-al-equipo">
+        <h2 class="titulo-clases">Conozca al equipo</h2>
+        <div class="oferta-rubro">
+
+            <h2 class="subtitulos">Primer integrante</h2>
+
+            <img class="imagen" src="./img/Foto CV Baja.jpg" alt="foto-integrante" />
+            <a href="https://www.linkedin.com/in/sebastian-wajshan/"><img src="./img/Captura de pantalla 2022-05-30 a la(s) 18.51.29.png" class="imagen" alt="linkedin"></a>
+            <p class="nombre">Sebastian Wajshan (159517)</p>
+        </div>
+    </section>
+
+    <footer class="pie">
+      <p>
+        Programación 1 - Obligatorio 1er. semestre 2022 - Universidad ORT Uruguay
+      </p>
+    </footer>
+
+    <script src="js/clases.js"></script> 
+    <script src="js/funciones.js"></script> 
+    <script src="datos.js"></script> 
+
+  </body>
+</html>

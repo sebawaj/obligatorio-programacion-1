@@ -1,0 +1,215 @@
+/* Sebastian Wajshan 159517 */
+
+body{
+    color: dimgrey;
+    background-color: gray;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.menu{
+    background-color:#A5A1A1;
+    color: #A5A1A1;
+    text-decoration: underline;
+    width: 99,8%;
+    height: 20px;
+    padding: 2px;
+    
+}
+
+nav{
+    background-color: #A5A1A1;
+}
+
+
+form input, form select {
+    display: inline-block;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+form label {
+    display: inline-block;
+    float: left;
+    width: 100px;
+}
+
+form form label {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+form {
+    margin: 0;
+}
+
+#secciones{
+    color: white;
+    margin-right: 35px;
+}
+
+.datos{
+    background-color: white;
+    border: solid;
+    border-color: black;
+    width: 90%;
+    align-items: center;
+    margin-left: 55px;
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+.consultas{
+    background-color: white;
+    border: solid;
+    border-color: black;
+    width: 90%;
+    align-items: center;
+    margin-left: 55px;
+    margin-right: 20px;
+}
+
+.conozca-al-equipo{
+    background-color: white;
+    border: solid;
+    border-color: black;
+    width: 90%;
+    align-items: center;
+    margin-left: 55px;
+    margin-right: 20px;
+}
+
+.titulo-clases{
+    background-color: #535050;
+    color: whitesmoke;
+    margin-left: 45px;
+    height: 25px;
+    margin-top: 15px;
+}
+
+
+
+.campo{
+    width: 200px;
+    display: inline-block;
+}
+
+.form-alta-empleado{
+    margin-left: 95px;
+    margin-bottom: 45px;
+    display: inline-block;
+}
+
+.form-alta-rubro{
+    margin-left: 95px;
+    margin-top: 10px;
+    margin-bottom: 45px;
+}
+
+.form-alta-oferta{
+    margin-left: 95px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.form-baja-oferta{
+    margin-left: 95px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+} */
+
+.celda{
+    display: inline-block;
+    margin-right: 80px;
+    width: 200px;
+}
+
+.botones{
+    width: 200px;
+}
+
+h4{
+    display: inline;
+    justify-content: space-around;
+}
+
+.sin-datos-1{
+    color: blue;
+}
+
+.sin-datos-2{
+    color: red;
+}
+
+.imagen{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.form-alta-rubro{
+    margin-left: 95px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.oferta-rubro{
+        margin-left: 95px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+.checkbox{
+    width: 177px;
+}
+
+.estadisticas{
+    font-weight: bold;
+}
+
+.precioCreciente{
+    margin-left: 100px;
+}
+
+table,th{
+    border: 2px solid black;
+}
+
+.nombre{
+display: inline-block;
+text-align: center;
+display: inline;
+}
+
+.pie{
+    background-color: #A5A1A1;
+    margin: 0;
+    color: white;
+}
+
+p{
+    margin: 0;
+    padding: 1px;
+    text-align: center;
+    height: 20px;
+    margin-bottom: 1px;
+}
+
+@media screen and (max-width:680px){
+        form label {
+            display: block;
+            float: none;
+            width: auto;
+            margin-top: 0;
+        }
+        
+        form input, fieldset select {
+            width: 100%;
+        }
+    } 
